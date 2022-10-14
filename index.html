@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monvalise</title>
+
+    <!-- Adding Bootstrap -->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="upper-header container-fluid ">
+        <div class="hand-like">👍</div>
+        <div>
+            <img src="src/upper-header-dress.svg" alt="dress icon">
+        </div>
+        <div class="upperheader-text">Брендовий верхній одяг від 899 грн</div>
+    </div>
+
+    <!-- nav container(logo&navigation) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-xxl navpadding">
+            <div class="row">
+
+                <div class="col-3">
+                    <a class="navbar-brand" href="#">
+                        <img src="src/logo.svg" alt="Main site logo">
+                    </a>
+                </div>
+    
+                <div class="col-5">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Знайти речі або бренди" aria-label="Search">
+                    </form>
+                </div>
+    
+                <div class="col-3">
+                    <button type="button" class="btn btn-dark">Додати товар</button>
+                </div>
+                
+                <div class="col-1">
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Укр.
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Francais</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <img src="src/profile/core.svg" alt="Likes profile icon">
+                            </a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="src/profile/message.svg" alt="message profile icon">
+                            </a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="src/profile/cart.svg" alt="Cart profile icon">
+                            </a>
+                        </li>
+    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="src/profile/Avatar.svg" alt="Profile user image">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Налаштування</a></li>
+                                <li><a class="dropdown-item" href="#">Профіль</a></li>
+                            </ul>
+                        </li>
+                </div>
+                <!-- <div class="col-1 text-end">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        </ul>
+                  </div>
+                </div> -->
+                
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="container-xxl">
+        <hr>
+        <nav class="low-navigation-bar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">головна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">каталог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">жінкам</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">чоловікам</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">дитячі речі</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">аукціон</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">бренди</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">акції</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">аутентифікація</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">блог</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+
+    <!--main container(filter&products)  -->
+    <div class="container-xxl">
+        <!-- Basic filters -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Головна</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Каталог одягу</li>
+            </ol>
+        </nav>
+
+        <div class="section-name">
+            Каталог одягу
+        </div>
+
+        <div class="row upperfilters">
+            <div class="col">
+                Фільтри
+            </div>
+ 
+            <div class="col text-end sort-by">
+                <laber for="sort-by">Сортувати за:</laber>
+                <select name="sort-by" id="">
+                    <option value="1">За замовчуванням</option>
+                    <option value="2">За зростанням</option>
+                    <option value="3">За спадінням</option>
+                    <option value="4">Від дешевих до дорожчих</option>
+                    <option value="5">Від дорогих до дешевих</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- main catalog -->
+        <div class="row">
+            <!-- Filters -->
+            <div class="col-3">
+                <div class="accordion" id="categoryAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Категорії
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#categoryAccordeon">
+                        <div class="accordion-body">
+                            <input type="checkbox" name="up">
+                            <label for="up">Верхній одяг</label>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="priceAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Ціна
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#priceAccordeon">
+                        <div class="accordion-body">
+                            <input type="range">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="sellerAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTree" aria-expanded="false" aria-controls="collapseTree">
+                            Продавець
+                        </button>
+                      </h2>
+                      <div id="collapseTree" class="accordion-collapse collapse" aria-labelledby="headingTree" data-bs-parent="#sellerAccordeon">
+                        <div class="accordion-body">
+                            Список продавців
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="brandAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Бренд
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#brandAccordeon">
+                        <div class="accordion-body">
+                            Список брендів
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="sexAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Стать
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#sexAccordeon">
+                        <div class="accordion-body">
+                            <div>
+                                <input type="checkbox" name="sexWoman">
+                                <label for="sexWoman">Жінкам</label>
+                            </div>
+                            
+                            <div>
+                                <input type="checkbox" name="sexMan">
+                                <label for="sexMan">Чоловікам</label>
+                            </div>
+                            
+                            <div>
+                                <input type="checkbox" name="unisex">
+                                <label for="unisex">Унісекс</label>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="sizeAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Розмір
+                        </button>
+                      </h2>
+                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#sizeAccordeon">
+                        <div class="accordion-body">
+                            <div>
+                                <input type="checkbox" name="sizexs">
+                                <label for="sizexs">XS</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="sizes">
+                                <label for="sizes">S</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="sizem">
+                                <label for="sizem">M</label>
+                            </div>
+                            
+                            <div>
+                                <input type="checkbox" name="sizel">
+                                <label for="sizel">L</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="sizexl">
+                                <label for="sizexl">XL</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="sizexxl">
+                                <label for="sizexxl">XXL</label>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="colorAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Колір
+                        </button>
+                      </h2>
+                      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#colorAccordeon">
+                        <div class="accordion-body">
+                            <div>
+                                <input type="checkbox" name="colorBlack">
+                                <label for="colorBlack">Чорний</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="colorWhite">
+                                <label for="colorWhite">Білий</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="colorGrey">
+                                <label for="colorGrey">Сірий</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="colorBrown">
+                                <label for="colorBrown">Коричневий</label>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="materialAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            Матеріал
+                        </button>
+                      </h2>
+                      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#materialAccordeon">
+                        <div class="accordion-body">
+                            <div>
+                                <input type="checkbox" name="materialLeather">
+                                <label for="materialLeather">Шкіра</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="materialTextile">
+                                <label for="materialTextile">Тканина</label>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="seasonAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Сезон
+                        </button>
+                      </h2>
+                      <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#seasonAccordeon">
+                        <div class="accordion-body">
+                            <div>
+                                <input type="checkbox" name="seasonWinter">
+                                <label for="seasonWinter">Зима</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="seasonSpring">
+                                <label for="seasonSpring">Весна</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="seasonSummer">
+                                <label for="seasonSummer">Літо</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="seasonFall">
+                                <label for="seasonFall">Осінь</label>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="styleAccordeon">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            Стиль
+                        </button>
+                      </h2>
+                      <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#styleAccordeon">
+                        <div class="accordion-body">
+                            Список стилів
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Catalog -->
+            <div class="col-9">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/1.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>LOUIS VUITTON</small><br>
+                                    Темно-сині джинси Louis Vuitton
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">5 499</div>
+                                        <div class="card-new-price">3 799</div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Херсон
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar1.svg" alt="Seller avatar" width="20px" height="20px">
+                                            LoveBrand
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/2.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>THOM BROWNE</small><br>
+                                    Чорний піджак Thom Browne
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">11 999</div>
+                                        <div class="card-new-price">8 599</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Хмельницький
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar2.svg" alt="Seller avatar" width="20px" height="20px">
+                                            Sell_For_Men
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/3.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info hidden">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>CANALI</small><br>
+                                    Вовняний піджак Canali
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">4 999</div>
+                                        <div class="card-new-price">2 599</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Хмельницький
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar2.svg" alt="Seller avatar" width="20px" height="20px">
+                                            Sell_For_Men
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/4.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info hidden">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>LOUIS VUITTON</small><br>
+                                    Клатч Louis Vuitton Limelight
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">4 999</div>
+                                        <div class="card-new-price">3 499</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Дніпро
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar3.svg" alt="Seller avatar" width="20px" height="20px">
+                                            Brandear
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/5.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info hidden">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>ELENA GHISELINI</small><br>
+                                    Сумка з декором Elena Ghisellini
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">1 999</div>
+                                        <div class="card-new-price">1 599</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Дніпро
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar3.svg" alt="Seller avatar" width="20px" height="20px">
+                                            Brandear
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/6.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info hidden">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>ACNE</small><br>
+                                    Бомбер Acne на блискавці
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">5 999</div>
+                                        <div class="card-new-price">4 199</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Київ
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar4.svg" alt="Seller avatar" width="20px" height="20px">
+                                            Alexalex
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/7.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info hidden">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>GUCCI</small><br>
+                                    Довга сукня Gucci
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">11 999</div>
+                                        <div class="card-new-price">8 599</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Рівне
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar5.svg" alt="Seller avatar" width="20px" height="20px">
+                                            SellBuy
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/8.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info hidden">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>CHANEL</small><br>
+                                    Помаранчевий бомбер Woolrich
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">1 999</div>
+                                        <div class="card-new-price">1 599</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Кропивницький
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar6.svg" alt="Seller avatar" width="20px" height="20px">
+                                            Deeva_Sofia
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-light text-dark hidden">organic</span>
+                                </div>
+                                <div class="col text-end">
+                                    <img src="src/heart.svg" alt="Like icon" width="20px" height="20px">
+                                </div>
+                            </div>
+                            <img class="product-image" src="src/productsimages/9.svg" class="card-img-top" alt="Product image" width="207px" height="263px">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge bg-info hidden">топ</span>
+                                </div>
+                                <h5 class="card-title">
+                                    <small>HACHE</small><br>
+                                    Салатове пальто Hache
+                                </h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card-old-price">5 999</div>
+                                        <div class="card-new-price">4 199</div>
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <div class="card-location">
+                                            <img src="src/location.svg" alt="Location icon" width="12px" height="12px">
+                                            Київ
+                                        </div>
+                                        <div class="card-seller">
+                                            <img src="src/Avatar1.svg" alt="Seller avatar" width="20px" height="20px">
+                                            LoveBrand
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- paging -->
+                <nav aria-label="Page navigation ">
+                    <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Попередня</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">7</a></li>
+                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Наступна</a>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-xxl helps">
+            <div class="row">
+                <div class="col">
+                    <div>Довідка для покупців</div>
+                    <div>Отримати підтримку</div>
+                    <div>Як купувати</div>
+                    <div>Як залишити корисний відгук</div>
+                    <div>Програма Захисту Покупців</div>
+                    <div>Рекомендації з безпечних покупок</div>
+                </div>
+                <div class="col">
+                    <div>Довідка для продавця</div>
+                    <div>Як почати продавати</div>
+                    <div>Тарифи</div>
+                    <div>Угода користувача</div>
+                    <div>політика конфеденційності</div>
+                    <div>Правила користування порталом</div>
+                    <div>Бонусна програма</div>
+                </div>
+                <div class="col">
+                    <div>Про нас</div>
+                    <div>Довідка та FAQ</div>
+                    <div>Захист легальності контенту</div>
+                    <div>Адміністрація</div>
+                    <div>Вакансії</div>
+                </div>
+                <div class="col">
+                    <div>Мобільний додаток</div>
+                    <div>
+                        <a href="#">
+                            <img src="src/google-play.svg" alt="gogleplay link">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-xxl">
+            <hr>
+        </div>
+
+        <div class="container-xxl copyrights">
+            © 2022 Monvalise
+        </div>
+    </footer>
+
+    <!-- <div class="panel">
+        <div>
+            <img src="src/logo.svg" alt="Web store logo">
+        </div>
+        <input type="search">
+        <button>Додати товар</button>
+        <select name="language-list" id="language-toogle">
+            <option value="ukr">Укр.</option>
+            <option value="en">En</option>
+        </select>
+        <div>like icon</div>
+        <div>message icon</div>
+        <div>cart icon</div>
+        
+        <div>Profile photo</div>
+        <div>dropdown</div>
+    </div> -->
+
+
+    <!-- <div class="row navigation">
+        <div class="col-md-1">головна</div>
+        <div class="col-md-1">каталог</div>
+        <div class="col-md-1">жінкам</div>
+        <div class="col-md-1">чоловікам</div>
+        <div class="col-md-1">дитячі речі</div>
+        <div class="col-md-1">аукціон</div>
+        <div class="col-md-1">бренди</div>
+        <div class="col-md-1">акції</div>
+        <div class="col-md-1">аутентифікація</div>
+        <div class="col-md-1">блог</div>
+    </div> -->
+</body>
+</html>
